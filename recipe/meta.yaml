@@ -21,6 +21,10 @@ build:
 
 requirements:
   build:
+    - cross-r-base {{ r_base }}  # [build_platform != target_platform]
+    - r-nlme                     # [build_platform != target_platform]
+    - r-vegan                    # [build_platform != target_platform]
+    - r-ape                      # [build_platform != target_platform]
     - {{ compiler('c') }}              # [not win]
     - {{ compiler('m2w64_c') }}        # [win]
     - {{ posix }}filesystem        # [win]
