@@ -1,4 +1,4 @@
-{% set version = "1.8.2" %}
+{% set version = "1.8.4" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/picante_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/picante/picante_{{ version }}.tar.gz
-  sha256: 56565ca7f7c37f49c961372a816724967c21a4f5025cd69b8b671122bfdc4aa7
+  sha256: 18e82c5cf582bd0beec3fa472fc13e89d1d7bf4426093b526257d2abf76d053a
 
 build:
-  number: 4
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -51,8 +51,8 @@ test:
 about:
   home: https://CRAN.R-project.org/package=picante
   license: GPL-2.0-only
-  summary: Functions for phylocom integration, community analyses, null-models, traits and evolution. Implements numerous ecophylogenetic approaches including measures of community phylogenetic and trait diversity, phylogenetic signal, estimation of trait values for unobserved taxa, null models for community and phylogeny
-    randomizations, and utility functions for data input/output and phylogeny plotting. A full description of package functionality and methods are provided by Kembel et al. (2010) <doi:10.1093/bioinformatics/btq166>.
+  summary: Functions for phylocom integration, community analyses, null-models, traits and evolution. Implements numerous ecophylogenetic approaches including measures of community phylogenetic and trait diversity, phylogenetic signal, estimation of trait values for unobserved taxa, null models for community and 
+    phylogeny randomizations, and utility functions for data input/output and phylogeny plotting. A full description of package functionality and methods are provided by Kembel et al. (2010) <doi:10.1093/bioinformatics/btq166>.
   license_family: GPL2
   license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
 
